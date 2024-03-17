@@ -8,14 +8,28 @@
 
 const play = document.querySelector("#play");
 
-const grid =  document.querySelector("#grid");
+const grid = document.querySelector("#grid");
+
+const diff = document.querySelector("#difficoltà");
 
 // Quando clicclo su play  creo i quadrati e all'interno i numeri
 play.addEventListener("click", function(){
     grid.innerHTML = '';
-    for (let i = 1; i <= 100; i++) {
-        const square = generateSquare(i);
-        grid.append(square);
+    if (diff.value === `easy`) {
+        for (let i = 1; i <= 100; i++) {
+            const newSquare = generateSquare(i);
+            grid.append(newSquare);
+        }
+    } else if (diff.value === `medium`) {
+        for (let i = 1; i <= 81; i++) {
+            const newSquare = generateSquare(i);
+            grid.append(newSquare);
+        }
+    } else {
+        for (let i = 1; i <= 49; i++) {
+            const newSquare = generateSquare(i);
+            grid.append(newSquare);
+        }
     }
 })
 // Creo una funzione che genera un quadrato
@@ -24,6 +38,7 @@ play.addEventListener("click", function(){
 // con il numero della cella cliccata.
 function generateSquare(number) {
     const square = document.createElement("div");
+    square.classList.add("ms-square");
     square.classList.add("ms-square-big");
     square.classList.add("d-flex");
     square.classList.add("justify-content-center");

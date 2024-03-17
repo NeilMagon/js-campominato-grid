@@ -15,12 +15,22 @@ img{
 .ms-bg-color {
     background-color: #7fffd4;
 }
-.ms-square-big{
-    width: calc(100% / 10);
-    height: calc(100% / 10);
+.ms-square{
     border: 1px solid;
     cursor: pointer;
 }
+.ms-square-big{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+/* .ms-square-medium{
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+}
+.ms-square-hard{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+} */
 .ms-bg-lightblue{
     background-color: aqua;
 }
