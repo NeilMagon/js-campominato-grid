@@ -7,3 +7,16 @@ img{
     height: 50px;
     max-width: 100%;
 }
+.ms-container{
+    width: 37.5rem;
+    height: 37.5rem;
+    margin: 0 auto;
+}
+.ms-bg-color {
+    background-color: #7fffd4;
+}
+.ms-square-big{
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+    border: 1px solid;
+}
