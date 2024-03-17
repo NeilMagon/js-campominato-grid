@@ -9,12 +9,18 @@
 </head>
 <body>
     <header>
-        <section class="container-fluid py-3 px-3 d-flex justify-content-between">
+        <section class="container-fluid py-2 px-3 d-flex justify-content-between">
             <div class="d-flex">
                 <img src="img/boolean-logo.png" alt="Boolean Logo">
                 <h1 class="ps-3">Campo Minato</h1>
             </div>
             <div>
+                <label>Seleziona il livello</label>
+                <select id="difficoltà">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
                 <button id="play" class="btn btn-secondary">Play</button>
             </div>
         </section>
@@ -25,7 +31,7 @@
             </section>
     </main>
     <footer>
-        <section class="container-fluid py-3 px-3">
+        <section class="container-fluid pt-4">
             <p>Made with ❤️ by <a href="*">Boolean</a></p>
         </section>
     </footer>
