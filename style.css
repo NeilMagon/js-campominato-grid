@@ -19,10 +19,6 @@ img{
     border: 1px solid;
     cursor: pointer;
 }
-.ms-square-big{
-    width: calc(100% / 10);
-    height: calc(100% / 10);
-}
 /* .ms-square-medium{
     width: calc(100% / 9);
     height: calc(100% / 9);

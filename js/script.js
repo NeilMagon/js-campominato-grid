@@ -12,26 +12,31 @@ const grid = document.querySelector("#grid");
 
 const diff = document.querySelector("#difficoltà");
 
+let row;
 // Quando clicclo su play  creo i quadrati e all'interno i numeri
 play.addEventListener("click", function(){
     grid.innerHTML = '';
     if (diff.value === `easy`) {
         for (let i = 1; i <= 100; i++) {
             const newSquare = generateSquare(i);
+            row = 10
             grid.append(newSquare);
         }
     } else if (diff.value === `medium`) {
         for (let i = 1; i <= 81; i++) {
             const newSquare = generateSquare(i);
+            row = 9;
             grid.append(newSquare);
         }
     } else {
         for (let i = 1; i <= 49; i++) {
             const newSquare = generateSquare(i);
+            row = 7;
             grid.append(newSquare);
         }
     }
 })
+
 // Creo una funzione che genera un quadrato
 // Quando l'utente clicca su ogni cella, la cella cliccata si 
 // colora di azzurro ed emetto un messaggio in console 
@@ -39,7 +44,8 @@ play.addEventListener("click", function(){
 function generateSquare(number) {
     const square = document.createElement("div");
     square.classList.add("ms-square");
-    square.classList.add("ms-square-big");
+    square.style.width = `calc(100% / ${row})`;
+    square.style.height = `calc(100% / ${row})`;
     square.classList.add("d-flex");
     square.classList.add("justify-content-center");
     square.classList.add("align-items-center");
@@ -51,3 +57,4 @@ function generateSquare(number) {
     });
     return square;
 }
+
